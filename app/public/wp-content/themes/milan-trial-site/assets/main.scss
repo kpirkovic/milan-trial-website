@@ -7,6 +7,8 @@
 
 // @import "../node_modules/bootstrap/scss/bootstrap"; // Include all of Bootstrap
 
+//Importing Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
 
@@ -42,7 +44,9 @@ $gray-800: #343a40;
 $gray-900: #212529;
 
 // Color vars
-$primary: red;
+$primary: #FB6941;
+$secondary: #4365C9;
+$accent: #353753;
 $blue: #0d6efd;
 $indigo: #6610f2;
 $purple: #6f42c1;
@@ -111,10 +115,73 @@ $link-decoration: none;
 
 /* Home Page Custom Styling */
 #hero-section {
-	//background-image: url("<?php echo esc_url( get_template_directory_uri() . '/assets/images/waves-background.png'); ?>");
-	background-image: url("https://images.unsplash.com/photo-1664098295863-62a394edad97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1460&q=80");
+	background-image: cover;
+	background-repeat: no-repeat;
+	.hero-img{
+		height: clamp(25rem, 60vw, 40rem);
+		object-fit: contain;
+	}
 }
-
+#widgets-section img {
+	object-fit: contain;
+}
+@media screen and (max-width: 768px){
+	#widgets-section .container {
+		height: 75vh !important;
+	}
+	.carousel-control-prev & .carousel-control-next {
+		position: relative !important;
+	}
+}
+.phone-wrapper {
+	width: fit-content;
+}
+.informational-circle {
+	width: 4.25rem;
+	aspect-ratio: 1/1;
+	box-shadow: 0 7px 17px rgba(0, 0, 0, 0.075);
+	font-size: 1.1rem;
+}
+.phone-wrapper {
+	.informational-circle:nth-child(1){
+		bottom: 20%;
+		left: -20%;
+		width: 5.7rem !important;
+	}
+	.informational-circle:nth-child(2){
+		top: 25%;
+		right: -15%;
+		width: 5.7rem !important;
+	}
+}
+.flip-z-180 {
+	transform: rotateZ(180deg);
+}
+section {
+	.informational-circle {
+		position: relative;
+	}
+	.informational-circle:nth-child(1) {
+		z-index: 3;
+	}
+	.informational-circle:nth-child(2) {
+		right: .8rem;
+		z-index: 2;
+	}
+	.informational-circle:nth-child(3) {
+		right: 1.6rem;
+		z-index: 1;
+	}
+}
+.vertical-text {
+	writing-mode: vertical-lr;
+	font-size: 12rem;
+    right: -55%;
+    top: 50%;
+    z-index: -1;
+    transform: translateY(-50%);
+	opacity: .05;
+}
 
 body {
 	&.page-template-page-full {
