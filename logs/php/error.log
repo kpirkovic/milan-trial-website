@@ -54,3 +54,4 @@ Stack trace:
 #16 {main}
   thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\functions.php on line 12
 [13-Nov-2022 06:25:46 UTC] PHP Parse error:  syntax error, unexpected token "endif", expecting end of file in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\header.php on line 57
+[14-Nov-2022 08:40:47 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 128

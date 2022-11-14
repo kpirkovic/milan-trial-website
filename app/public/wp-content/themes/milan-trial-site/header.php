@@ -8,7 +8,7 @@
 </head>
 
 <?php
-	$navbar_scheme   = get_theme_mod( 'navbar_scheme', 'navbar-dark bg-primary' ); // Get custom meta-value.
+	$navbar_scheme   = get_theme_mod( 'navbar_scheme', 'navbar-dark' ); // Get custom meta-value.
 	$navbar_position = get_theme_mod( 'navbar_position', 'fixed_top' ); // Get custom meta-value.
 
 	$search_enabled  = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value.
@@ -22,7 +22,7 @@
 
 <div id="wrapper">
 	<header>
-		<nav id="header" class="navbar navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
+		<nav id="header" class="navbar py-3 navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container d-flex justify-content-between">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php
@@ -49,17 +49,23 @@
 							array(
 								'theme_location' => 'main-menu',
 								'container'      => '',
-								'menu_class'     => 'navbar-nav d-flex gap-4 align-items-center mt-3 mt-md-0',
+								'menu_class'     => 'navbar-nav d-flex gap-5 fs-5 align-items-center mt-3 mt-md-0',
 								'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
 								'walker'         => new WP_Bootstrap_Navwalker(),
 							)
 						);
 					?>
 				</div><!-- /.navbar-collapse -->
-				<div>
-					<a class="text-white text-decoration-none" href=''><i class="bi bi-facebook">Facebook</i></a>
-					<a class="text-white text-decoration-none" href=''><i class="bi bi-facebook">Instagram</i></a>
-					<a class="text-white text-decoration-none" href=''><i class="bi bi-facebook">Twitter</i></a>
+				<div class='d-flex gap-4'>
+					<a class="text-white text-decoration-none" href=''>
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/facebook-icon.png' ); ?>" alt="Facebook Icon">
+					</a>
+					<a class="text-white text-decoration-none" href=''>
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/instagram-icon.png' ); ?>" alt="Facebook Icon">
+					</a>
+					<a class="text-white text-decoration-none" href=''>
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/twitter-icon.png' ); ?>" alt="Facebook Icon">
+					</a>
 				</div>
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
