@@ -1,0 +1,56 @@
+[10-Nov-2022 15:23:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function w_header() in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\header.php:1
+Stack trace:
+#0 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(783): require_once()
+#1 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(718): load_template('C:\\Users\\Kristi...', true, Array)
+#2 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\home.php(2): get_header()
+#4 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Kristi...')
+#5 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Kristi...')
+#6 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\index.php(17): require('C:\\Users\\Kristi...')
+#7 {main}
+  thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\header.php on line 1
+[10-Nov-2022 15:23:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_header() in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\header.php:1
+Stack trace:
+#0 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(783): require_once()
+#1 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(718): load_template('C:\\Users\\Kristi...', true, Array)
+#2 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\home.php(2): get_header()
+#4 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Kristi...')
+#5 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Kristi...')
+#6 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\index.php(17): require('C:\\Users\\Kristi...')
+#7 {main}
+  thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\header.php on line 1
+[10-Nov-2022 15:23:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wp_header() in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\header.php:1
+Stack trace:
+#0 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(783): require_once()
+#1 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(718): load_template('C:\\Users\\Kristi...', true, Array)
+#2 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\home.php(2): get_header()
+#4 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Kristi...')
+#5 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Kristi...')
+#6 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\index.php(17): require('C:\\Users\\Kristi...')
+#7 {main}
+  thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\header.php on line 1
+[10-Nov-2022 15:28:03 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-customize-widgets.php on line 900
+[10-Nov-2022 15:29:20 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-customize-widgets.php on line 900
+[10-Nov-2022 15:57:10 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "THEME_VERSION" in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\functions.php:12
+Stack trace:
+#0 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-hook.php(308): milan_theme_load_scripts('')
+#1 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\script-loader.php(2180): do_action('wp_enqueue_scri...')
+#4 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-hook.php(308): wp_enqueue_scripts('')
+#5 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#6 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\general-template.php(3043): do_action('wp_head')
+#8 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\header.php(1): wp_head()
+#9 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(783): require_once('C:\\Users\\Kristi...')
+#10 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(718): load_template('C:\\Users\\Kristi...', true, Array)
+#11 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#12 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\home.php(1): get_header()
+#13 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Kristi...')
+#14 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Kristi...')
+#15 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\index.php(17): require('C:\\Users\\Kristi...')
+#16 {main}
+  thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milantrialtheme\functions.php on line 12
+[13-Nov-2022 06:25:46 UTC] PHP Parse error:  syntax error, unexpected token "endif", expecting end of file in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\header.php on line 57
