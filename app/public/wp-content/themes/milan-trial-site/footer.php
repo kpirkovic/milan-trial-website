@@ -1,49 +1,48 @@
 
-		<footer id="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<p><?php printf( esc_html__( '&copy; %1$s %2$s. All rights reserved.', 'milan-trial-site' ), date_i18n( 'Y' ), get_bloginfo( 'name', 'display' ) ); ?></p>
+		<footer id="footer" class="d-flex flex-column align-items-center">
+			<div class="container text-white px-0 my-4">
+				<div class="d-flex text-center text-lg-start justify-content-center flex-column flex-lg-row justify-content-lg-between py-5">
+					<a class="navbar-brand text-uppercase fs-4" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<?php
+							$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value.
+
+							if ( ! empty( $header_logo ) ) :
+						?>
+							<img src="<?php echo esc_url( $header_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+						<?php
+							else :
+								echo esc_attr( get_bloginfo( 'name', 'display' ) );
+							endif;
+						?>
+					</a>
+
+					<?php
+						// Loading WordPress Custom Menu (theme_location).
+						wp_nav_menu(
+							array(
+								'theme_location' => 'footer-menu',
+								'container'      => '',
+								'menu_class'     => 'navbar-nav d-flex flex-row gap-5 justify-content-center justify-content-lg-start  align-items-center mt-3 mt-md-0 fs-5',
+								'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
+								'walker'         => new WP_Bootstrap_Navwalker(),
+							)
+						);
+					?>
+					<div class='d-flex gap-4 align-items-center'>
+						<a class="text-white text-decoration-none" href=''>
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/facebook-icon.png' ); ?>" alt="Facebook Icon">
+						</a>
+						<a class="text-white text-decoration-none" href=''>
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/instagram-icon.png' ); ?>" alt="Facebook Icon">
+						</a>
+						<a class="text-white text-decoration-none" href=''>
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/twitter-icon.png' ); ?>" alt="Facebook Icon">
+						</a>
 					</div>
-
-					<?php
-						if ( has_nav_menu( 'footer-menu' ) ) : // See function register_nav_menus() in functions.php
-							/*
-								Loading WordPress Custom Menu (theme_location) ... remove <div> <ul> containers and show only <li> items!!!
-								Menu name taken from functions.php!!! ... register_nav_menu( 'footer-menu', 'Footer Menu' );
-								!!! IMPORTANT: After adding all pages to the menu, don't forget to assign this menu to the Footer menu of "Theme locations" /wp-admin/nav-menus.php (on left side) ... Otherwise the themes will not know, which menu to use!!!
-							*/
-							wp_nav_menu(
-								array(
-									'theme_location'  => 'footer-menu',
-									'container'       => 'nav',
-									'container_class' => 'col-md-6',
-									'fallback_cb'     => '',
-									'items_wrap'      => '<ul class="menu nav justify-content-end">%3$s</ul>',
-									//'fallback_cb'    => 'WP_Bootstrap4_Navwalker_Footer::fallback',
-									'walker'          => new WP_Bootstrap4_Navwalker_Footer(),
-								)
-							);
-						endif;
-
-						if ( is_active_sidebar( 'third_widget_area' ) ) :
-					?>
-						<div class="col-md-12">
-							<?php
-								dynamic_sidebar( 'third_widget_area' );
-
-								if ( current_user_can( 'manage_options' ) ) :
-							?>
-								<span class="edit-link"><a href="<?php echo esc_url( admin_url( 'widgets.php' ) ); ?>" class="badge bg-secondary"><?php esc_html_e( 'Edit', 'milan-trial-site' ); ?></a></span><!-- Show Edit Widget link -->
-							<?php
-								endif;
-							?>
-						</div>
-					<?php
-						endif;
-					?>
-				</div><!-- /.row -->
+				</div>
 			</div><!-- /.container -->
+			<!--Line -->
+			<div class="w-75 border border-secondary opacity-25"></div>
 		</footer><!-- /#footer -->
 	</div><!-- /#wrapper -->
 	<?php

@@ -9,9 +9,7 @@
 
 <?php
 	$navbar_scheme   = get_theme_mod( 'navbar_scheme', 'navbar-dark' ); // Get custom meta-value.
-	$navbar_position = get_theme_mod( 'navbar_position', 'fixed_top' ); // Get custom meta-value.
-
-	$search_enabled  = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value.
+	$navbar_position = get_theme_mod( 'navbar_position', 'absolute_top' ); // Get custom meta-value.
 ?>
 
 <body <?php body_class(); ?>>
@@ -22,7 +20,7 @@
 
 <div id="wrapper">
 	<header>
-		<nav id="header" class="navbar py-3 navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
+		<nav id="header" class="navbar py-3 navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; elseif ( isset( $navbar_position ) && 'absolute_top' === $navbar_position ) : echo ' position-absolute start-0 top-0 w-100'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container d-flex justify-content-between">
 				<a class="navbar-brand text-uppercase fs-4" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php
@@ -56,7 +54,7 @@
 						);
 					?>
 				</div><!-- /.navbar-collapse -->
-				<div class='d-flex gap-4'>
+				<div class='d-none d-lg-flex gap-4'>
 					<a class="text-white text-decoration-none" href=''>
 						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/facebook-icon.png' ); ?>" alt="Facebook Icon">
 					</a>

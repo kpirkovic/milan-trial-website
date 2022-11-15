@@ -57,3 +57,27 @@ Stack trace:
 [14-Nov-2022 08:40:47 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 128
 [14-Nov-2022 13:16:00 UTC] Cron reschedule event error for hook: wp_privacy_delete_old_export_files, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
 [14-Nov-2022 15:12:04 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "/assets/images/waves-backgroun..." in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 8
+[15-Nov-2022 08:58:07 UTC] PHP Fatal error:  Uncaught ArgumentCountError: 3 arguments are required, 2 given in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php:6
+Stack trace:
+#0 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php(6): printf('%1$s %2$s', 'Fun Weather.')
+#1 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(783): require_once('C:\\Users\\Kristi...')
+#2 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(718): load_template('C:\\Users\\Kristi...', true, Array)
+#3 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#4 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php(307): get_footer()
+#5 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Kristi...')
+#6 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Kristi...')
+#7 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\index.php(17): require('C:\\Users\\Kristi...')
+#8 {main}
+  thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php on line 6
+[15-Nov-2022 08:58:46 UTC] PHP Fatal error:  Uncaught ArgumentCountError: 3 arguments are required, 1 given in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php:6
+Stack trace:
+#0 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php(6): printf('%1$s %2$s')
+#1 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(783): require_once('C:\\Users\\Kristi...')
+#2 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(718): load_template('C:\\Users\\Kristi...', true, Array)
+#3 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#4 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php(307): get_footer()
+#5 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Kristi...')
+#6 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Kristi...')
+#7 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\index.php(17): require('C:\\Users\\Kristi...')
+#8 {main}
+  thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php on line 6

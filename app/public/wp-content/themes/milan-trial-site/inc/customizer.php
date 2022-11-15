@@ -91,6 +91,7 @@ function milan_trial_site_customize( $wp_customize ) {
 				'static'       => __( 'Static', 'milan-trial-site' ),
 				'fixed_top'    => __( 'Fixed to top', 'milan-trial-site' ),
 				'fixed_bottom' => __( 'Fixed to bottom', 'milan-trial-site' ),
+				'absolute_top' => __( 'Absolute top', 'milan-trial-site' ),
 			),
 			'settings' => 'navbar_position',
 			'priority' => 2,
