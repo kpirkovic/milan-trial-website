@@ -55,7 +55,7 @@
 					?>
 				</div><!-- /.navbar-collapse -->
 				<div class='d-none d-lg-flex gap-4'>
-					<a class="text-white text-decoration-none" href=''>
+					<a class="text-white text-decoration-none pe-2" href=''>
 						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/facebook-icon.png' ); ?>" alt="Facebook Icon">
 					</a>
 					<a class="text-white text-decoration-none" href=''>

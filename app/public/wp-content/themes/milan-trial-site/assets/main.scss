@@ -119,6 +119,9 @@ $link-decoration: none;
 .bg-accent, .btn-accent{
 	background-color: $accent;
 }
+.text-accent {
+	color: $accent;
+}
 .btn-accent:hover,
 .btn-accent:focus,
 .btn-accent:active,
@@ -136,7 +139,12 @@ $link-decoration: none;
 #scroll-down-btn {
 	left: 50%;
 	bottom: 10%;
-	// transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: fit-content;
+}
+#scroll-up-btn {
+	right: 7.5%;
+	bottom: 0%;
 }
 #widgets-section img {
 	object-fit: contain;

@@ -81,3 +81,60 @@ Stack trace:
 #7 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\index.php(17): require('C:\\Users\\Kristi...')
 #8 {main}
   thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php on line 6
+[15-Nov-2022 13:17:39 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\formatting.php:4377
+Stack trace:
+#0 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\formatting.php(4377): ltrim(Array)
+#1 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php(11): esc_url(Array)
+#2 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(783): require_once('C:\\Users\\Kristi...')
+#3 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(718): load_template('C:\\Users\\Kristi...', true, Array)
+#4 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#5 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php(310): get_footer()
+#6 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Kristi...')
+#7 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Kristi...')
+#8 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\index.php(17): require('C:\\Users\\Kristi...')
+#9 {main}
+  thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\formatting.php on line 4377
+[15-Nov-2022 13:18:31 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\formatting.php:4377
+Stack trace:
+#0 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\formatting.php(4377): ltrim(Array)
+#1 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php(11): esc_url(Array)
+#2 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(783): require_once('C:\\Users\\Kristi...')
+#3 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(718): load_template('C:\\Users\\Kristi...', true, Array)
+#4 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#5 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php(310): get_footer()
+#6 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Kristi...')
+#7 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Kristi...')
+#8 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\index.php(17): require('C:\\Users\\Kristi...')
+#9 {main}
+  thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\formatting.php on line 4377
+[15-Nov-2022 13:18:33 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\formatting.php:4377
+Stack trace:
+#0 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\formatting.php(4377): ltrim(Array)
+#1 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php(11): esc_url(Array)
+#2 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(783): require_once('C:\\Users\\Kristi...')
+#3 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(718): load_template('C:\\Users\\Kristi...', true, Array)
+#4 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#5 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php(310): get_footer()
+#6 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Kristi...')
+#7 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Kristi...')
+#8 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\index.php(17): require('C:\\Users\\Kristi...')
+#9 {main}
+  thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\formatting.php on line 4377
+[15-Nov-2022 13:18:51 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\formatting.php:4377
+Stack trace:
+#0 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\formatting.php(4377): ltrim(Array)
+#1 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php(11): esc_url(Array)
+#2 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(783): require_once('C:\\Users\\Kristi...')
+#3 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template.php(718): load_template('C:\\Users\\Kristi...', true, Array)
+#4 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#5 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php(310): get_footer()
+#6 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Kristi...')
+#7 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Kristi...')
+#8 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\index.php(17): require('C:\\Users\\Kristi...')
+#9 {main}
+  thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\formatting.php on line 4377
+[15-Nov-2022 13:20:45 UTC] PHP Warning:  foreach() argument must be of type array|object, bool given in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php on line 16
+[15-Nov-2022 13:25:21 UTC] PHP Warning:  Trying to access array offset on value of type int in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php on line 21
+[15-Nov-2022 13:25:21 UTC] PHP Warning:  Trying to access array offset on value of type int in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php on line 21
+[15-Nov-2022 13:25:40 UTC] PHP Warning:  Undefined array key "Fun" in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php on line 21
+[15-Nov-2022 13:25:40 UTC] PHP Warning:  Undefined array key "Weather." in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php on line 21
