@@ -97,25 +97,134 @@ function milan_trial_site_customize( $wp_customize ) {
 			'priority' => 2,
 		)
 	);
+	// Front Page Customizaton
 
-	// Search?
-	$wp_customize->add_setting(
-		'search_enabled',
-		array(
-			'default'           => '1',
-			'sanitize_callback' => 'sanitize_text_field',
-		)
-	);
-	$wp_customize->add_control(
-		'search_enabled',
-		array(
-			'type'     => 'checkbox',
-			'label'    => __( 'Show Searchfield?', 'milan-trial-site' ),
-			'section'  => 'theme_header_section',
-			'settings' => 'search_enabled',
-			'priority' => 3,
-		)
-	);
+	$wp_customize->add_panel( 'home_customization', array(
+		'title'          => 'Front Page Customization',
+		'active_callback'=> 'is_front_page',
+	) );
+			
+	// Create our sections
+
+	$wp_customize->add_section( 'hero_page_settings' , array(
+		'title'             => 'Hero Section',
+		'description'       => 'Changes you make here will alter the Hero Section Heading, Paragraph and Image.',
+		'panel'             => 'home_customization',
+		'active_callback'   => 'is_front_page',
+	) );
+			
+	// Create our settings
+	
+	//Hero Image
+	$wp_customize->add_setting('hero_image', array(
+        'transport'  => 'refresh',
+        'height'     => 325,
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'hero_image_control', array(
+        'label'      => __('Hero Image', 'name-theme'),
+        'section'    => 'hero_page_settings',
+        'settings'   => 'hero_image',    
+    ))); 
+	//Hero Heading	
+	$wp_customize->add_setting( 'hero_heading' , array(
+		'type'       => 'theme_mod',
+		'transport'  => 'refresh',
+	) );
+	$wp_customize->add_control( 'hero_heading_control', array(
+		'label'      => 'Hero Heading',
+		'section'    => 'hero_page_settings',
+		'settings'   => 'hero_heading',
+		'type'       => 'text',
+	) );
+	//Hero Paragraph
+	$wp_customize->add_setting( 'hero_paragraph' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control( 'hero_paragraph_control', array(
+		'label'      => 'Hero Paragraph',
+		'section'    => 'hero_page_settings',
+		'settings'   => 'hero_paragraph',
+		'type'       => 'text',
+	) );
+
+	//Screen Shots Sections
+	// Create our sections
+
+	$wp_customize->add_section( 'screenshot_settings' , array(
+		'title'             => 'Screenshot Sections',
+		'panel'             => 'home_customization',
+		'active_callback'   => 'is_front_page',
+	) );
+			
+	// Create our settings
+	
+	//Screenshot Image 01
+	$wp_customize->add_setting('screenshot_01', array(
+        'transport'  => 'refresh',
+        'height'     => 325,
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'screen_shot_01_control', array(
+        'label'      => __('Screen Shot Image 01', 'name-theme'),
+        'section'    => 'screenshot_settings',
+        'settings'   => 'screenshot_01',    
+    ))); 
+	//Hero Heading	
+	$wp_customize->add_setting( 'screenshot_01_heading' , array(
+		'type'       => 'theme_mod',
+		'transport'  => 'refresh',
+	) );
+	$wp_customize->add_control( 'screenshot_01_control', array(
+		'label'      =>  __('Screenshot 01 Heading','milan-trial-theme'),
+		'section'    => 'screenshot_settings',
+		'settings'   => 'screenshot_01_heading',
+		'type'       => 'text',
+	) );
+	//Hero Paragraph
+	$wp_customize->add_setting( 'screenshot_01_paragraph' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control( 'screenshot_01_paragraph_control', array(
+		'label'      =>  __('Screenshot 01 Paragraph','milan-trial-theme'),
+		'section'    => 'screenshot_settings',
+		'settings'   => 'screenshot_01_paragraph',
+		'type'       => 'text',
+	) );
+
+	//Screenshot Image 02
+	$wp_customize->add_setting('screenshot_02', array(
+        'transport'  => 'refresh',
+        'height'     => 325,
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'screen_shot_02_control', array(
+        'label'      =>  __('Screenshot 02 Image','milan-trial-theme'),
+        'section'    => 'screenshot_settings',
+        'settings'   => 'screenshot_02',    
+    ))); 
+	//Hero Heading	
+	$wp_customize->add_setting( 'screenshot_02_heading' , array(
+		'type'       => 'theme_mod',
+		'transport'  => 'refresh',
+	) );
+	$wp_customize->add_control( 'screenshot_02_control', array(
+		'label'      => __('Screenshot 02 Heading','milan-trial-theme'),
+		'section'    => 'screenshot_settings',
+		'settings'   => 'screenshot_02_heading',
+		'type'       => 'text',
+	) );
+	//Hero Paragraph
+	$wp_customize->add_setting('screenshot_02_paragraph' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control('screenshot_02_paragraph_control', array(
+		'label'      =>  __('Screenshot 02 Paragraph','milan-trial-theme'),
+		'section'    => 'screenshot_settings',
+		'settings'   => 'screenshot_02_paragraph',
+		'type'       => 'text',
+	) );
+
 }
 add_action( 'customize_register', 'milan_trial_site_customize' );
 

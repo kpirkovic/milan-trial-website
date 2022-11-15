@@ -138,3 +138,46 @@ Stack trace:
 [15-Nov-2022 13:25:21 UTC] PHP Warning:  Trying to access array offset on value of type int in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php on line 21
 [15-Nov-2022 13:25:40 UTC] PHP Warning:  Undefined array key "Fun" in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php on line 21
 [15-Nov-2022 13:25:40 UTC] PHP Warning:  Undefined array key "Weather." in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\footer.php on line 21
+[15-Nov-2022 14:10:25 UTC] PHP Parse error:  Unclosed '(' on line 133 does not match '}' in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\inc\customizer.php on line 143
+[15-Nov-2022 14:10:25 UTC] PHP Parse error:  Unclosed '(' on line 133 does not match '}' in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\inc\customizer.php on line 143
+[15-Nov-2022 14:10:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 372
+[15-Nov-2022 14:10:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 373
+[15-Nov-2022 14:10:26 UTC] PHP Parse error:  Unclosed '(' on line 133 does not match '}' in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\inc\customizer.php on line 143
+[15-Nov-2022 14:20:16 UTC] PHP Parse error:  syntax error, unexpected token "," in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 17
+[15-Nov-2022 14:36:09 UTC] PHP Parse error:  syntax error, unexpected token "," in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\inc\customizer.php on line 124
+[15-Nov-2022 14:36:09 UTC] PHP Parse error:  syntax error, unexpected token "," in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\inc\customizer.php on line 124
+[15-Nov-2022 14:51:07 UTC] PHP Warning:  Undefined variable $feature1 in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 8
+[15-Nov-2022 14:54:42 UTC] PHP Fatal error:  Uncaught Error: Class "Koksijde_PostTypes_Control" not found in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\inc\customizer.php:184
+Stack trace:
+#0 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-hook.php(308): milan_trial_site_customize(Object(WP_Customize_Manager))
+#1 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-customize-manager.php(934): do_action('customize_regis...', Object(WP_Customize_Manager))
+#4 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-hook.php(308): WP_Customize_Manager->wp_loaded('')
+#5 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#6 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-settings.php(639): do_action('wp_loaded')
+#8 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-config.php(93): require_once('C:\\Users\\Kristi...')
+#9 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-load.php(50): require_once('C:\\Users\\Kristi...')
+#10 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Kristi...')
+#11 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Kristi...')
+#12 {main}
+  thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\inc\customizer.php on line 184
+[15-Nov-2022 15:25:50 UTC] PHP Fatal error:  Cannot use empty array elements in arrays in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\inc\customizer.php on line 211
+[15-Nov-2022 15:25:50 UTC] PHP Fatal error:  Cannot use empty array elements in arrays in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\inc\customizer.php on line 211
+[15-Nov-2022 15:37:16 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\inc\customizer.php:228
+Stack trace:
+#0 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-hook.php(308): milan_trial_site_customize(Object(WP_Customize_Manager))
+#1 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-customize-manager.php(934): do_action('customize_regis...', Object(WP_Customize_Manager))
+#4 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-hook.php(308): WP_Customize_Manager->wp_loaded('')
+#5 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#6 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#7 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-settings.php(639): do_action('wp_loaded')
+#8 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-config.php(93): require_once('C:\\Users\\Kristi...')
+#9 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-load.php(50): require_once('C:\\Users\\Kristi...')
+#10 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Kristi...')
+#11 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Kristi...')
+#12 {main}
+  thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\inc\customizer.php on line 228
