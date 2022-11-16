@@ -181,3 +181,12 @@ Stack trace:
 #11 C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Kristi...')
 #12 {main}
   thrown in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\inc\customizer.php on line 228
+[16-Nov-2022 10:14:38 UTC] PHP Warning:  Undefined variable $screenshot_01_temperature in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 161
+[16-Nov-2022 10:14:38 UTC] PHP Warning:  Undefined variable $screenshot_01_weather in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 164
+[16-Nov-2022 10:14:38 UTC] PHP Warning:  Undefined variable $screenshot_01_weather in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 178
+[16-Nov-2022 10:14:38 UTC] PHP Warning:  Undefined variable $screenshot_02_temperature in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 198
+[16-Nov-2022 10:14:38 UTC] PHP Warning:  Undefined variable $screenshot_02_weather in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 201
+[16-Nov-2022 10:14:38 UTC] PHP Warning:  Undefined variable $screenshot_02_weather in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 215
+[16-Nov-2022 10:31:42 UTC] PHP Parse error:  syntax error, unexpected token "echo" in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 175
+[16-Nov-2022 10:38:24 UTC] PHP Warning:  Undefined variable $screenshot_01_weather_icon in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 175
+[16-Nov-2022 10:38:25 UTC] PHP Warning:  Undefined variable $screenshot_01_weather_icon in C:\Users\Kristijan\Local Sites\milan-trial-website\app\public\wp-content\themes\milan-trial-site\home.php on line 175

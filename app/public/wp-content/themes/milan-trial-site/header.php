@@ -20,7 +20,7 @@
 
 <div id="wrapper">
 	<header>
-		<nav id="header" class="navbar py-3 navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; elseif ( isset( $navbar_position ) && 'absolute_top' === $navbar_position ) : echo ' position-absolute start-0 top-0 w-100'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
+		<nav id="header" class="navbar py-3 navbar-expand-md bg-primary <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; elseif ( isset( $navbar_position ) && 'absolute_top' === $navbar_position ) : echo ' position-absolute start-0 top-0 w-100'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container d-flex justify-content-between">
 				<a class="navbar-brand text-uppercase fs-4" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php

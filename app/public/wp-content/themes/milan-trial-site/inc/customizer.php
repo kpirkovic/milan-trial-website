@@ -169,7 +169,7 @@ function milan_trial_site_customize( $wp_customize ) {
         'section'    => 'screenshot_settings',
         'settings'   => 'screenshot_01',    
     ))); 
-	//Hero Heading	
+	//Screenshot Heading	
 	$wp_customize->add_setting( 'screenshot_01_heading' , array(
 		'type'       => 'theme_mod',
 		'transport'  => 'refresh',
@@ -180,7 +180,7 @@ function milan_trial_site_customize( $wp_customize ) {
 		'settings'   => 'screenshot_01_heading',
 		'type'       => 'text',
 	) );
-	//Hero Paragraph
+	//Screenshot Paragraph
 	$wp_customize->add_setting( 'screenshot_01_paragraph' , array(
 		'type'          => 'theme_mod',
 		'transport'     => 'refresh',
@@ -191,6 +191,37 @@ function milan_trial_site_customize( $wp_customize ) {
 		'settings'   => 'screenshot_01_paragraph',
 		'type'       => 'text',
 	) );
+	//Screenshot Temperature
+	$wp_customize->add_setting('screenshot_01_temperature' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control('screenshot_01_temperature_control', array(
+		'label'      =>  __('Screenshot 01 Temperature','milan-trial-theme'),
+		'section'    => 'screenshot_settings',
+		'settings'   => 'screenshot_01_temperature',
+		'type'       => 'text',
+	) );
+	//Screenshot Wheater
+	$wp_customize->add_setting('screenshot_01_weather' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control('screenshot_01_weather_control', array(
+		'label'      =>  __('Screenshot 01 Weather','milan-trial-theme'),
+		'section'    => 'screenshot_settings',
+		'settings'   => 'screenshot_01_weather',
+		'type'       => 'text',
+	));
+	$wp_customize->add_setting('screenshot_01_icon', array(
+        'transport'  => 'refresh',
+        'height'     => 325,
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'screenshot_01_icon_control', array(
+        'label'      => __('Screen Shot Weather Icon 01', 'name-theme'),
+        'section'    => 'screenshot_settings',
+        'settings'   => 'screenshot_01_icon',    
+    ))); 
 
 	//Screenshot Image 02
 	$wp_customize->add_setting('screenshot_02', array(
@@ -202,7 +233,7 @@ function milan_trial_site_customize( $wp_customize ) {
         'section'    => 'screenshot_settings',
         'settings'   => 'screenshot_02',    
     ))); 
-	//Hero Heading	
+	//Screenshot Heading	
 	$wp_customize->add_setting( 'screenshot_02_heading' , array(
 		'type'       => 'theme_mod',
 		'transport'  => 'refresh',
@@ -213,7 +244,7 @@ function milan_trial_site_customize( $wp_customize ) {
 		'settings'   => 'screenshot_02_heading',
 		'type'       => 'text',
 	) );
-	//Hero Paragraph
+	//Screenshot Paragraph
 	$wp_customize->add_setting('screenshot_02_paragraph' , array(
 		'type'          => 'theme_mod',
 		'transport'     => 'refresh',
@@ -224,6 +255,101 @@ function milan_trial_site_customize( $wp_customize ) {
 		'settings'   => 'screenshot_02_paragraph',
 		'type'       => 'text',
 	) );
+	//Screenshot Temperature
+	$wp_customize->add_setting('screenshot_02_temperature' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control('screenshot_02_temperature_control', array(
+		'label'      =>  __('Screenshot 02 Temperature','milan-trial-theme'),
+		'section'    => 'screenshot_settings',
+		'settings'   => 'screenshot_02_temperature',
+		'type'       => 'text',
+	) );
+	//Screenshot Wheater
+	$wp_customize->add_setting('screenshot_02_weather' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control('screenshot_02_weather_control', array(
+		'label'      =>  __('Screenshot 02 Weather','milan-trial-theme'),
+		'section'    => 'screenshot_settings',
+		'settings'   => 'screenshot_02_weather',
+		'type'       => 'text',
+	));
+	$wp_customize->add_setting('screenshot_02_icon', array(
+        'transport'  => 'refresh',
+        'height'     => 325,
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'screenshot_02_icon_control', array(
+        'label'      => __('Screen Shot Weather Icon 02', 'name-theme'),
+        'section'    => 'screenshot_settings',
+        'settings'   => 'screenshot_02_icon',    
+    ))); 
+
+	//Screenshot Image 03
+	$wp_customize->add_setting('screenshot_03', array(
+        'transport'  => 'refresh',
+        'height'     => 325,
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'screen_shot_03_control', array(
+        'label'      =>  __('Screenshot 03 Image','milan-trial-theme'),
+        'section'    => 'screenshot_settings',
+        'settings'   => 'screenshot_03',    
+    ))); 
+	//Screenshot Heading	
+	$wp_customize->add_setting( 'screenshot_03_heading' , array(
+		'type'       => 'theme_mod',
+		'transport'  => 'refresh',
+	) );
+	$wp_customize->add_control( 'screenshot_03_control', array(
+		'label'      => __('Screenshot 03 Heading','milan-trial-theme'),
+		'section'    => 'screenshot_settings',
+		'settings'   => 'screenshot_03_heading',
+		'type'       => 'text',
+	) );
+	//Screenshot Paragraph
+	$wp_customize->add_setting('screenshot_03_paragraph' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control('screenshot_03_paragraph_control', array(
+		'label'      =>  __('Screenshot 03 Paragraph','milan-trial-theme'),
+		'section'    => 'screenshot_settings',
+		'settings'   => 'screenshot_03_paragraph',
+		'type'       => 'text',
+	) );
+	//Screenshot Temperature
+	$wp_customize->add_setting('screenshot_03_temperature' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control('screenshot_03_temperature_control', array(
+		'label'      =>  __('Screenshot 03 Temperature','milan-trial-theme'),
+		'section'    => 'screenshot_settings',
+		'settings'   => 'screenshot_03_temperature',
+		'type'       => 'text',
+	) );
+	//Screenshot Wheater
+	$wp_customize->add_setting('screenshot_03_weather' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control('screenshot_03_weather_control', array(
+		'label'      =>  __('Screenshot 03 Weather','milan-trial-theme'),
+		'section'    => 'screenshot_settings',
+		'settings'   => 'screenshot_03_weather',
+		'type'       => 'text',
+	));
+	$wp_customize->add_setting('screenshot_03_icon', array(
+        'transport'  => 'refresh',
+        'height'     => 325,
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'screenshot_03_icon_control', array(
+        'label'      => __('Screen Shot Weather Icon 03', 'name-theme'),
+        'section'    => 'screenshot_settings',
+        'settings'   => 'screenshot_03_icon',    
+    ))); 
 
 }
 add_action( 'customize_register', 'milan_trial_site_customize' );
