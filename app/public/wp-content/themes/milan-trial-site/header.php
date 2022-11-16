@@ -10,6 +10,15 @@
 <?php
 	$navbar_scheme   = get_theme_mod( 'navbar_scheme', 'navbar-dark' ); // Get custom meta-value.
 	$navbar_position = get_theme_mod( 'navbar_position', 'absolute_top' ); // Get custom meta-value.
+	$navbar_social = get_theme_mod( 'navbar_social', 'show' ); // Get custom meta-value.
+
+	global $facebook_link;
+	global $instagram_link;
+	global $twitter_link;
+	
+	$facebook_link = get_theme_mod( 'facebook_link' );
+	$instagram_link = get_theme_mod( 'instagram_link' );
+	$twitter_link = get_theme_mod( 'twitter_link' );
 ?>
 
 <body <?php body_class(); ?>>
@@ -54,17 +63,19 @@
 						);
 					?>
 				</div><!-- /.navbar-collapse -->
+				<?php if(isset( $navbar_social ) && 'show' === $navbar_social ) { ?>
 				<div class='d-none d-lg-flex gap-4'>
-					<a class="text-white text-decoration-none pe-2" href=''>
+					<a class="text-white text-decoration-none pe-2" target="_blank" href='<?php echo $facebook_link; ?>'>
 						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/facebook-icon.png' ); ?>" alt="Facebook Icon">
 					</a>
-					<a class="text-white text-decoration-none" href=''>
+					<a class="text-white text-decoration-none" target="_blank" href='<?php echo $instagram_link; ?>'>
 						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/instagram-icon.png' ); ?>" alt="Facebook Icon">
 					</a>
-					<a class="text-white text-decoration-none" href=''>
+					<a class="text-white text-decoration-none" target="_blank" href='<?php echo $twitter_link; ?>'>
 						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/twitter-icon.png' ); ?>" alt="Facebook Icon">
 					</a>
 				</div>
+				<?php } ?>
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
 	</header>

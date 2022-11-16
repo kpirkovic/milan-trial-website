@@ -10,6 +10,11 @@ $hero_img_id = attachment_url_to_postid($hero_img);
 $hero_img_alt = get_post_meta( $hero_img_id, '_wp_attachment_image_alt', true );
 $hero_heading = get_theme_mod('hero_heading', 'Get the most Fun Weather App');
 $hero_paragraph = get_theme_mod('hero_paragraph', 'Simple, nice and user-friendly application of the weather. Only useful information.');
+//Slider Section Variables 
+$slider_img_01 = esc_url(get_theme_mod('slider_01_img'));
+$slider_img_02 = esc_url(get_theme_mod('slider_02_img'));
+$slider_img_03 = esc_url(get_theme_mod('slider_03_img'));
+$slider_images = array($slider_img_01, $slider_img_02, $slider_img_03);
 //Screenshot Section 01 Variables 
 $screenshot_01_img = esc_url(get_theme_mod('screenshot_01' ));
 $screenshot_01_id = attachment_url_to_postid($screenshot_01_img);
@@ -44,11 +49,11 @@ $heroBackground = get_template_directory_uri() . '/assets/images/waves-backgroun
 
 <main class="overflow-hidden">
     <!-- Hero Section -->
-    <section id="hero-section" style="background-image: url('<?php echo $heroBackground ?>');" id="hero-section" class="position-relative overflow-hidden">
+    <section id="hero-section" style="background-image: url('<?php echo $heroBackground ?>');" id="hero-section" class="position-relative">
         <!-- Section Container -->
-        <div class='container py-5 py-sm-0 d-flex align-items-center justify-content-center'>
+        <div class='container py-5 d-flex align-items-center justify-content-center h-100'>
             <!-- 2 Colums Wrapper -->
-            <div class="row align-items-center w-100 min-vh-100 flex-column-reverse flex-sm-row">
+            <div class="row align-items-center w-100 flex-column-reverse flex-sm-row pb-lg-5">
                 <!-- Left Content Column -->
                 <div class="col-lg-6 px-0">
                     <div class="my-5 text-center text-lg-start">
@@ -62,7 +67,7 @@ $heroBackground = get_template_directory_uri() . '/assets/images/waves-backgroun
                 </div>
                 <!-- Right Content Column -->
                 <div class="col-lg-6 d-flex justify-content-center">
-                    <img class="hero-img" src="<?php echo $hero_img; ?>" alt="<?php $hero_img_alt ?>">
+                    <img class="img-fluid" src="<?php echo $hero_img; ?>" alt="<?php $hero_img_alt ?>">
                 </div>
                 <!-- Scroll Down BTN Absolute Position -->
                 <a id="scroll-down-btn" class="position-absolute d-none d-lg-block" href="#features-section" type="button" role="button">
@@ -140,15 +145,23 @@ $heroBackground = get_template_directory_uri() . '/assets/images/waves-backgroun
             <!-- Slider Wrapper -->
             <div class="row h-75">
                 <div id="carouselExampleControls" class="carousel slide h-100" data-bs-ride="carousel">
+                    <!-- Slider Inner -->
                     <div class="carousel-inner h-100 w-100">
-                        <!-- Slider Item 01 -->
-                        <div class="carousel-item active w-100 h-100">
-                            <img class='h-100 w-100' src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/mobile-app-slider-img-01.png' ); ?>" alt="Picture of Mobile App Preview">
-                        </div>
-                        <!-- Slider Item 02 -->
-                        <div class="carousel-item w-100 h-100">
-                            <img class='h-100 w-100' src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/mobile-app-slider-img-01.png' ); ?>" alt="Picture of Mobile App Preview">
-                        </div>
+                        <!-- Slider Items -->
+                        <?php 
+                        foreach($slider_images as $key=>$slide){ 
+                            if(!empty($slide) && $key <= 0) { 
+                            $slide_id = attachment_url_to_postid($slide);
+                            $slide_alt = get_post_meta( $slide_id, '_wp_attachment_image_alt', true );
+                            ?>
+                            <div class="carousel-item active w-100 h-100">
+                                <img class='h-100 w-100' src="<?php echo $slide; ?>" alt="<?php echo $slide_alt; ?>">
+                            </div>
+                        <?php } else if (!empty($slide) && $key > 0){ ?>
+                            <div class="carousel-item w-100 h-100">
+                                <img class='h-100 w-100' src="<?php echo $slide; ?>" alt="<?php echo $slide_alt; ?>">
+                            </div>
+                        <?php }} ?>
                     </div>
                     <!-- Slider BTNs (left/right) Wrapper -->
                     <div id="carousel-btns-wrapper">
@@ -322,21 +335,19 @@ $heroBackground = get_template_directory_uri() . '/assets/images/waves-backgroun
             </div>
     </section>
     <!-- CTA Section -->
-    <section id="cta-section" class='vh-50'>
+    <section id="cta-section">
         <div class='container d-flex align-items-center h-100 pt-5 overflow-hidden'>
             <div class="row gx-5 h-100">
-                <div class="col-lg-5 h-100">
-                    <div class="my-5 text-center text-lg-start h-100">
-                        <h2 class="display-6 text-white mb-4 text-uppercase fw-normal">How download the app?</h2>
-                        <p class="lead fw-normal text-white mb-4 col-lg-11">Just download the app from the store Simple, nice and user-friendly application of the weather. Only relevant and useful information.</p>
-                        <div class="d-grid gap-3 d-flex justify-content-center justify-content-lg-start pb-4">
-                            <a href="" target="_blank" role="button">
-                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/appstore-badge.png' ); ?>" alt="Icon of Ios App Store">
-                            </a>
-                            <a href="" target="_blank" role="button">
-                                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/googleplay-badge.png' ); ?>" alt="Icon of Google Play Store">
-                            </a>
-                        </div>
+                <div class="col-lg-6 h-auto text-center text-lg-start d-flex flex-column justify-content-center">
+                    <h2 class="display-6 text-white mb-4 text-uppercase fw-normal">How download the app?</h2>
+                    <p class="lead fw-normal text-white mb-4 col-lg-11">Just download the app from the store Simple, nice and user-friendly application of the weather. Only relevant and useful information.</p>
+                    <div class="d-grid gap-3 d-flex justify-content-center justify-content-lg-start pb-4">
+                        <a href="" target="_blank" role="button">
+                            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/appstore-badge.png' ); ?>" alt="Icon of Ios App Store">
+                        </a>
+                        <a href="" target="_blank" role="button">
+                            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/googleplay-badge.png' ); ?>" alt="Icon of Google Play Store">
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6 px-0 h-100 position-relative">

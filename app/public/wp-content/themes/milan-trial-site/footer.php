@@ -1,3 +1,10 @@
+		<?php
+
+		/* Get Global Social Links Values from Header */ 
+		global $facebook_link;
+		global $instagram_link;
+		global $twitter_link; 
+		?>
 
 		<footer id="footer" class="d-flex flex-column align-items-center position-relative">
 			<div class="container text-white px-0 my-4">
@@ -31,20 +38,20 @@
 							array(
 								'theme_location' => 'footer-menu',
 								'container'      => '',
-								'menu_class'     => 'navbar-nav d-flex flex-column flex-sm-row gap-3 gap-sm-5 justify-content-center justify-content-lg-start align-items-center mt-5 mt-md-0 fs-5',
+								'menu_class'     => 'navbar-nav d-flex flex-column flex-sm-row gap-3 gap-sm-5 justify-content-center justify-content-lg-start align-items-center mt-5 mt-lg-0 fs-5',
 								'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
 								'walker'         => new WP_Bootstrap_Navwalker(),
 							)
 						);
 					?>
-					<div class='d-flex gap-4 align-items-center justify-content-center mt-5 mt-lg-0'>
-						<a class="text-white text-decoration-none pe-2" href=''>
+					<div class='d-none d-lg-flex gap-4'>
+						<a class="text-white text-decoration-none pe-2" target="_blank" href='<?php echo $facebook_link; ?>'>
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/facebook-icon.png' ); ?>" alt="Facebook Icon">
 						</a>
-						<a class="text-white text-decoration-none" href=''>
+						<a class="text-white text-decoration-none" target="_blank" href='<?php echo $instagram_link; ?>'>
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/instagram-icon.png' ); ?>" alt="Facebook Icon">
 						</a>
-						<a class="text-white text-decoration-none" href=''>
+						<a class="text-white text-decoration-none" target="_blank" href='<?php echo $twitter_link; ?>'>
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/twitter-icon.png' ); ?>" alt="Facebook Icon">
 						</a>
 					</div>
@@ -53,7 +60,7 @@
 			<!--Line -->
 			<span class="w-100 border border-white opacity-25"></span>
 			<div class="container">
-				<div class="py-5 text-white-50 text-center text-lg-end w-100">
+				<div class="py-5 mb-4 mb-md-0 text-white-50 text-center text-xl-end w-100">
 					2016&copy; All Rights Reserved. Weather App Theme by SmartClick!
 				</div>
 			</div>

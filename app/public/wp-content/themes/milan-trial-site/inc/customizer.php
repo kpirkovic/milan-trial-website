@@ -20,7 +20,7 @@ function milan_trial_site_customize( $wp_customize ) {
 		'theme_header_section',
 		array(
 			'title'    => __( 'Header', 'milan-trial-site' ),
-			'priority' => 1000,
+			'priority' => 1,
 		)
 	);
 
@@ -73,6 +73,59 @@ function milan_trial_site_customize( $wp_customize ) {
 		)
 	);
 
+	// Navbar Social Icons.
+	$wp_customize->add_setting(
+		'navbar_social',
+		array(
+			'default'           => 'default',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'navbar_social_control',
+		array(
+			'type'     => 'radio',
+			'label'    => __( 'Show Social Icons', 'milan-trial-site' ),
+			'section'  => 'theme_header_section',
+			'choices'  => array(
+				'show'  => __( 'Yes', 'milan-trial-site' ),
+				'hide'    => __( 'No', 'milan-trial-site' ),
+			),
+			'settings' => 'navbar_social',
+			'priority' => 4,
+		)
+	);
+	$wp_customize->add_setting( 'facebook_link' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control( 'facebook_link_control', array(
+		'label'      => 'Facebook Link',
+		'section'    => 'theme_header_section',
+		'settings'   => 'facebook_link',
+		'type'       => 'text',
+	) );
+	$wp_customize->add_setting( 'instagram_link' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control( 'instagram_link_control', array(
+		'label'      => 'Instagram Link',
+		'section'    => 'theme_header_section',
+		'settings'   => 'instagram_link',
+		'type'       => 'text',
+	) );
+	$wp_customize->add_setting( 'twitter_link' , array(
+		'type'          => 'theme_mod',
+		'transport'     => 'refresh',
+	) );
+	$wp_customize->add_control( 'twitter_link_control', array(
+		'label'      => 'Twitter Link',
+		'section'    => 'theme_header_section',
+		'settings'   => 'twitter_link',
+		'type'       => 'text',
+	) );
+
 	// Fixed Header?
 	$wp_customize->add_setting(
 		'navbar_position',
@@ -111,6 +164,7 @@ function milan_trial_site_customize( $wp_customize ) {
 		'description'       => 'Changes you make here will alter the Hero Section Heading, Paragraph and Image.',
 		'panel'             => 'home_customization',
 		'active_callback'   => 'is_front_page',
+		'priority'	 => 1,
 	) );
 			
 	// Create our settings
@@ -351,6 +405,46 @@ function milan_trial_site_customize( $wp_customize ) {
         'settings'   => 'screenshot_03_icon',    
     ))); 
 
+	// Home Page Silder Section
+	$wp_customize->add_section( 'slider_settings' , array(
+		'title'             => 'Widgets Section',
+		'panel'             => 'home_customization',
+		'active_callback'   => 'is_front_page',
+		'priority'	 => 2,
+	) );
+			
+	// Create our settings
+	//Widget Image 01
+	$wp_customize->add_setting('slider_01_img', array(
+        'transport'  => 'refresh',
+        'height'     => 850,
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'slider_01_img_control', array(
+        'label'      => __('Slider Image 01', 'name-theme'),
+        'section'    => 'slider_settings',
+        'settings'   => 'slider_01_img',    
+    ))); 
+	//Widget Image 02
+	$wp_customize->add_setting('slider_02_img', array(
+        'transport'  => 'refresh',
+        'height'     => 850,
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'slider_02_img_control', array(
+        'label'      => __('Slider Image 02', 'name-theme'),
+        'section'    => 'slider_settings',
+        'settings'   => 'slider_02_img',    
+    ))); 
+	//Widget Image 03
+	$wp_customize->add_setting('slider_03_img', array(
+        'transport'  => 'refresh',
+        'height'     => 850,
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'slider_03_img_control', array(
+        'label'      => __('Slider Image 03', 'name-theme'),
+        'section'    => 'slider_settings',
+        'settings'   => 'slider_03_img',    
+    ))); 
+	
 }
 add_action( 'customize_register', 'milan_trial_site_customize' );
 
